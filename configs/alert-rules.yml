@@ -1,0 +1,20 @@
+groups:
+  - name: infrastructure-alerts
+    rules:
+      - alert: NginxDown
+        expr: probe_success == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "NGINX is down"
+          description: "NGINX has been unreachable for 30 seconds."
+
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance)(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 90
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "CPU usage is above 90%"
+
