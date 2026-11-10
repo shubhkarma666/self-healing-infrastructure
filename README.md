@@ -1,9 +1,9 @@
 # Self-Healing Infrastructure with Prometheus, Alertmanager & Ansible
 
 ## Evidence/Screenshot
-![01-nginx-failure-and-auto-recovery](screenshot/01-nginx-failure-and-auto-recovery.png)
+![01-nginx-failure-and-auto-recovery](screenshot/autorecovery.png)
 
-![02-ansible-webhook-execution](screenshot/02-ansible-webhook-execution.png)
+![02-ansible-webhook-execution](screenshot/recovery-ansible-webhook.png)
 
 ## 1. Project Introduction
 
